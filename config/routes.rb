@@ -8,13 +8,13 @@ Rails.application.routes.draw do
   #get 'users/new' => 'users#new'
   get '/signup' => 'users#new', as: :signup
   #get 'users/show'
-  #get 'users/:id' => 'users#show', as: :user
+  get 'users/:id' => 'users#show', as: :user
   #get 'users/create'
-  #post 'users/' => 'users#create'
+  post 'users/' => 'users#create'
   #get 'users/edit'
   #get 'users/:id/edit' => 'users#edit'
   get 'users/:id/edit' => 'users#edit', as: :edit_user
-  get 'users/update'
+  #get 'users/update'
   patch 'users/:id' => 'users#update'
   #get 'users/destroy'
   delete 'users/:id' => 'users#destroy'
