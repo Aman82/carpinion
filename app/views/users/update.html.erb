@@ -1,2 +1,13 @@
-<h1>Users#update</h1>
-<p>Find me in app/views/users/update.html.erb</p>
+<h1>Users user info</h1>
+
+    <%= form_for @user do |f| %>
+        Name: <%= f.text_field :name %>
+        Email: <%= f.text_field :email %>
+        Password: <%= f.text_field :password %>
+
+
+        <%= f.submit "Edit user!" %>
+
+    <% end %>
+
+    <%= link_to "Back to the list!", users_path %>

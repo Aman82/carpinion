@@ -1,28 +1,29 @@
 Rails.application.routes.draw do
   #resources :users
 
+# USER RESOURCES
   #get 'users/index'
   get 'users/' => 'users#index'
-
   #get 'users/new'
-  get 'users/new' => 'users#new'
-
+  #get 'users/new' => 'users#new'
+  get '/signup' => 'users#new', as: :signup
   #get 'users/show'
-  get 'users/:id' => 'users#show', as: :user
-
+  #get 'users/:id' => 'users#show', as: :user
   #get 'users/create'
-  post 'users/' => 'users#create'
-
+  #post 'users/' => 'users#create'
   #get 'users/edit'
   #get 'users/:id/edit' => 'users#edit'
   get 'users/:id/edit' => 'users#edit', as: :edit_user
-
-  #get 'users/update'
+  get 'users/update'
   patch 'users/:id' => 'users#update'
-
   #get 'users/destroy'
   delete 'users/:id' => 'users#destroy'
 
+
+# SESSIONS RESOURCES
+  get '/login' => 'sessions#new', as: :sessions
+  post '/login' => 'sessions#create'  
+  delete '/logout' =>'sessions#destroy', as: :log_out
 
 
   # The priority is based upon order of creation: first created -> highest priority.

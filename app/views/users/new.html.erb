@@ -1,13 +1,17 @@
-    <h1> Add new user </h1>
+<h2> Add new user </h2>
 
-    <%= form_for @user do |f| %>
-        Name: <%= f.text_field :name %>
-        Email: <%= f.text_field :email %>
-        Password: <%= f.text_field :password %>
+<h2>Sign Up!</h2>
 
+<%= form_for @user do |f| %>
+     <%= f.label :name %>
+     <%= f.text_field :name %>
 
-        <%= f.submit "Add user!" %>
+     <%= f.label :email %>
+     <%= f.text_field :email %>
 
-    <% end %>
+     <%= f.label :password %>
+     <%= f.text_field :password %>
 
+     <%= f.submit "Sign Me Up!" %>
+<% end %>
     <%= link_to "Back to the list!", users_path %>
