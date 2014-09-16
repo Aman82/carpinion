@@ -1,0 +1,19 @@
+<h1>Edit car info.</h1>
+
+    <%= form_for @car do |f| %>
+        Make: <%= f.text_field :make %><br />
+        Model: <%= f.text_field :model %><br />
+        Year: <%= f.text_field :year %><br />
+        Trim: <%= f.text_field :trim %><br />
+		Mileage: <%= f.text_field :mileage %><br />
+		Price: <%= f.text_field :price %><br />
+		Transmission: <%= f.text_field :transmission %><br />
+		Colour: <%= f.text_field :colour %><br />
+		Descripition: <%= f.text_field :description %><br />
+
+
+        <%= f.submit "Edit car details!" %>
+
+    <% end %>
+
+    <%= link_to "Back to the list!", cars_path %>

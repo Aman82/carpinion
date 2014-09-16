@@ -1,29 +1,43 @@
 Rails.application.routes.draw do
-  #resources :users
+ 
+  #get 'cars/index'
+  get 'cars/' => 'cars#index'
+  #get 'cars/new'
+  #get 'cars/create'
+  post 'cars/' => 'cars#create'
+  #get 'cars/show'
+  #get 'cars/edit'
+  get 'cars/:id/edit' => 'cars#edit', as: :edit_car
+  #get 'cars/update'
+  patch 'cars/:id' => 'cars#update'
+  #get 'cars/destroy'
+  delete 'cars/:id' => 'cars#destroy'
+
+  resources :cars
+
 
 # USER RESOURCES
-  #get 'users/index'
-  get 'users/' => 'users#index'
-  #get 'users/new'
-  #get 'users/new' => 'users#new'
-  get '/signup' => 'users#new', as: :signup
-  #get 'users/show'
-  get 'users/:id' => 'users#show', as: :user
-  #get 'users/create'
-  post 'users/' => 'users#create'
-  #get 'users/edit'
-  #get 'users/:id/edit' => 'users#edit'
-  get 'users/:id/edit' => 'users#edit', as: :edit_user
-  #get 'users/update'
-  patch 'users/:id' => 'users#update'
-  #get 'users/destroy'
-  delete 'users/:id' => 'users#destroy'
+  
+#   get 'users/' => 'users#index'
+#   get '/signup' => 'users#new', as: :signup
+#   get 'users/:id' => 'users#show', as: :user
+#   post 'users/' => 'users#create'
+#   get 'users/:id/edit' => 'users#edit', as: :edit_user
+#   patch 'users/:id' => 'users#update'
+#   delete 'users/:id' => 'users#destroy'
 
 
-# SESSIONS RESOURCES
-  get '/login' => 'sessions#new', as: :sessions
-  post '/login' => 'sessions#create'  
-  delete '/logout' =>'sessions#destroy', as: :log_out
+# # SESSIONS RESOURCES
+#   get '/login' => 'sessions#new', as: :sessions
+#   post '/login' => 'sessions#create'  
+#   delete '/logout' =>'sessions#destroy', as: :log_out
+
+# VEHICLE RESOURCES
+  #resources :carinfos
+  #get '/carinfo' => 'carinfos#index'
+  #get '/carinfo/' => 'carinfos#new', as: :carinfo
+  #post '/carinfo' => 'carinfos#create'
+  #delete 'carinfo/:id' => 'carinfos#destroy'
 
 
   # The priority is based upon order of creation: first created -> highest priority.

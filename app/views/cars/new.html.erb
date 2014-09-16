@@ -1,0 +1,35 @@
+<h1>Add new car details</h1>
+<%= form_for @car do |c| %>
+
+     <%= c.label :make %>
+     <%= c.text_field :make %><br />
+
+     <%= c.label :model %>
+     <%= c.text_field :model %><br />
+
+     <%= c.label :year %>
+     <%= c.text_field :year %><br />
+
+     <%= c.label :trim %>
+     <%= c.text_field :trim %><br />
+
+     <%= c.label :mileage %>
+     <%= c.text_field :mileage %><br />
+
+     <%= c.label :price %>
+     <%= c.text_field :price %><br />
+
+     <%= c.label :transmission %>
+     <%= c.text_field :transmission %><br />
+
+     <%= c.label :colour %>
+     <%= c.text_field :colour %><br />
+
+     <%= c.label :description %>
+     <%= c.text_field :description %><br />
+
+     <%= c.submit "Add info!" %>
+
+<% end %>
+
+    <%= link_to "Back to the list!", cars_path %>

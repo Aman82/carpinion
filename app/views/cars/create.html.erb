@@ -1,0 +1,37 @@
+
+<h2>Vehicle Detail Form!</h2>
+
+<%= form_for @car do |c| %>
+
+     <%= c.label :make %>
+     <%= c.text_field :make %>
+
+     <%= c.label :model %>
+     <%= c.text_field :model %>
+
+     <%= c.label :year %>
+     <%= c.text_field :year %>
+
+     <%= c.label :trim %>
+     <%= c.text_field :trim %>
+
+     <%= c.label :mileage %>
+     <%= c.text_field :mileage %>
+
+     <%= c.label :price %>
+     <%= c.text_field :price %>
+
+     <%= c.label :transmission %>
+     <%= c.text_field :transmission %>
+
+     <%= c.label :colour %>
+     <%= c.text_field :colour %>
+
+     <%= c.label :description %>
+     <%= c.text_field :description %>
+
+     <%= c.submit "Add info!" %>
+
+<% end %>
+
+    <%= link_to "Back to the list!", cars_path %>

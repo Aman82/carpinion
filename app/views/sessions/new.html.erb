@@ -1,10 +1,11 @@
-<h1>Sign In!</h1>
+<div class="signin">
 
 <%= form_for(:session, url: sessions_path) do |f| %>
     <%= f.label :email %> <%= f.text_field :email %>
     <%= f.label :password %> <%= f.password_field :password %>
-
-    <%= f.submit "Sign In!" %>
+<button type="button" class="btn btn-primary"><%= f.submit "Sign In!" %></button>
+    
 <% end %>
 
 <%= link_to "New User!", signup_path %>
+</div>
