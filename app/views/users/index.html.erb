@@ -2,7 +2,7 @@
     <ul>
         <% @users.each do |u| %>
             <li>
-                <strong> User name is <%= u.name %> ,E-mail ID:<%= u.email %> & password is <%= u.password %> </strong>
+                <strong> User name is</strong> <%= u.name %> ,<strong>E-mail ID:</strong><%= u.email %><strong> & password is</strong> <%= u.password %> 
                 <%= link_to "Edit user!", edit_user_path(u) %>
                  <%= link_to "Delete user!", @user, method: :delete, data: {confirm: 'Are you sure?'} %>
             </li>
