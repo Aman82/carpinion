@@ -21,6 +21,10 @@ class User
     end
   end
 
+  # validates_uniqueness_of :name
+  # validates :name, uniqueness: true
+  validates :email, presence: true, uniqueness: true
+  
 end
 
 

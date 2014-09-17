@@ -7,14 +7,14 @@ gem 'bcrypt', '~> 3.1.7'
 
 # for BootStrap
 gem 'bootstrap-sass', '~> 3.2.0'
-
-
+# Use SCSS for stylesheets
+gem 'sass-rails', '~> 4.0.3'
+# for automatic fixing in diffrent browsers
 gem 'autoprefixer-rails'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.0'
-# Use SCSS for stylesheets
-gem 'sass-rails', '~> 4.0.3'
+
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .js.coffee assets and views

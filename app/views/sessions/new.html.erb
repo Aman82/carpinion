@@ -3,7 +3,7 @@
 <%= form_for(:session, url: sessions_path) do |f| %>
     <%= f.label :email %> <%= f.text_field :email %>
     <%= f.label :password %> <%= f.password_field :password %>
-<button type="button" class="btn btn-primary"><%= f.submit "Sign In!" %></button>
+<%= f.submit "Sign In!" %>
     
 <% end %>
 
