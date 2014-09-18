@@ -30,21 +30,14 @@ h1{
 	float: right;
 }
 
-.footer{
-	background: #000000;
-	opacity: 0.8;
-	font-size: 18px;
-	color: #FFFFFF;
 
-}
 
 
  *, *:before, *:after { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
 
 
 body {
-background-color: #B0C4DE;
- 
+  background-color: #A9A9A9;
   font-size: 18px;
   font-family: Helvetica, "Helvetica Neue", Arial, sans-serif;
   text-rendering: optimizeLegibility;
@@ -56,18 +49,39 @@ background-color: #B0C4DE;
 
 #navbar {
   width: 100%;
-  height: 50px;
+  height: 70px;
   font-size: 14px;
-  font-family: cursive;
+  font-family: times new roman;
   font-weight: bold;
-  text-shadow: 3px 2px 3px #333333;
-  border-radius: 8px;
+  text-shadow: 2px 2px 2px #333333;
+  border-radius: 2px;
   position: fixed;
   top: 1rem; right: 1rem;
   text-align: left;
-  background-color: #00008B;
-  opacity: 0.7;
+  background-color: #0000CD;
+  opacity: 0.8;
   display: inline;
+}
+
+#carousel-id{
+  width: 800px;
+  height: 400px;
+  
+}
+
+.form-group{
+  float: right;
+}
+.footer{
+  width: 100%;
+
+  font-size: 16px;
+  position: fixed;
+ 
+  background: #000000;
+  opacity: 0.8;
+  color: #FFFFFF;
+
 }
 .navbar-form{
 
@@ -75,7 +89,7 @@ background-color: #B0C4DE;
 }
 
 rough{
-   background: url('car environment.jpg');
+  background: url('car environment.jpg');
   background-repeat: no-repeat;
   background-size: 100% 100%;
 }

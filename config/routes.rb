@@ -18,12 +18,12 @@ Rails.application.routes.draw do
   delete '/logout' =>'sessions#destroy', as: :log_out
 
 # VEHICLE RESOURCES
-  resources :cars
+  #resources :cars
   get 'cars/' => 'cars#index'
   post 'cars/' => 'cars#create'
   #get 'cars/:id/edit' => 'cars#edit', as: :edit_car
   patch 'cars/:id' => 'cars#update'
-  #delete 'cars/:id' => 'cars#destroy'
+  delete 'cars/:id' => 'cars#destroy'
 
 
   # The priority is based upon order of creation: first created -> highest priority.
