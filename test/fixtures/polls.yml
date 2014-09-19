@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  index: MyString
+  new: MyString
+  show: MyString
+  edit: MyString
+  index_no_polls: MyString
+  show_results: MyString
+
+two:
+  index: MyString
+  new: MyString
+  show: MyString
+  edit: MyString
+  index_no_polls: MyString
+  show_results: MyString

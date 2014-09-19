@@ -2,12 +2,9 @@
 
     
     <ul>
-        <% @cars.each do |c| %>
-            <li>
-                <strong> <%= c.make %>  -- <%= c.model %> -- <%= c.year %> -- <%= c.trim %> -- <%= c.mileage %> --<%= c.price %> -- <%= c.tremission %> -- <%= c.colour %> -- <%= c.description %></strong>
-                <%= link_to "More details!", cars_path(c) %>
-                <%= link_to "Edit car details!", edit_car_path(c) %>
-                 <%= link_to "Delete this car!", @car, method: :delete, data: { confirm: 'Are you sure you want to delete it?' } %>
-            </li>
-        <% end %>
+        <li>
+        <strong> Make of the car: <%= @car.make %> , year is: <%= @car.year %> , trim <%= @car.trim %> , mileage on car:  <%= @car.mileage %> asking price: <%= @car.price %> , transmission <%= @car.transmission %> , colour<%= @car.colour %> </strong>
+            <%= link_to "Delete this car!", @car, method: :delete, data: { confirm: 'Are you sure?' } %>
+            <%= link_to "Back to the list!", cars_path %>  
+        </li>
     </ul>

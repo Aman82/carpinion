@@ -17,75 +17,70 @@
  *= require_self
  */
 
-.logo
-{
-	
-
-}
-
-h1{
-	text-align: center;
-}
-.signup{
-	float: right;
-}
 
 
 
-
- *, *:before, *:after { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
-
-
-body {
-  background-color: #A9A9A9;
-  font-size: 18px;
-  font-family: Helvetica, "Helvetica Neue", Arial, sans-serif;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing:antialiased;
-  line-height: 1.5;
-  max-width: 100%;
-  margin: 3rem auto 10%;
+ body {
+        background-color: #A9A9A9;
+        font-size: 18px;
+        font-family: Helvetica, Arial, sans-serif;
+        text-rendering: optimizeLegibility;
+        line-height: 1.5;
+        max-width: 100%;
 }
 
 #navbar {
-  width: 100%;
-  height: 70px;
-  font-size: 14px;
-  font-family: times new roman;
-  font-weight: bold;
-  text-shadow: 2px 2px 2px #333333;
-  border-radius: 2px;
-  position: fixed;
-  top: 1rem; right: 1rem;
-  text-align: left;
-  background-color: #0000CD;
-  opacity: 0.8;
-  display: inline;
+        width: 100%;
+        height: 70px;
+        font-size: 14px;
+        font-family: times new roman;
+        position: fixed;
+        top: 0rem; left: 0rem;
+        text-align: right;
+        background-color: #696969;
+        opacity: 1.0;
+        display: inline;
+        z-index: 3;
+}
+.enter{
+
+      padding: 8px 8px 4px 4px;
 }
 
-#carousel-id{
-  width: 800px;
-  height: 400px;
-  
+#logo{
+      position: fixed;
+      top: 100px;
+      left: 10px;
 }
 
 .form-group{
-  float: right;
+          float: right;
 }
+
+.signup{
+        float: right;
+}
+
+.container{
+        background: #DCDCDC; 
+}
+
 .footer{
-  width: 100%;
-
-  font-size: 16px;
-  position: fixed;
- 
-  background: #000000;
-  opacity: 0.8;
-  color: #FFFFFF;
-
+          width: 100%;
+          font-size: 16px;
+          position: fixed;
+          bottom: 0rem;
+          background: #000000;
+          opacity: 0.8;
+          color: #FFFFFF;
 }
-.navbar-form{
 
- text-align: right;
+.navbar-form{
+         text-align: right;
+}
+
+li{
+  list-style-type: none;
 }
 
 rough{

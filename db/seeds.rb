@@ -42,4 +42,30 @@
    colour: "white",
    description: "clean in and out, all power options, leather seats and inbuilt nevagition"
     }
-  ])
+  ]);
+
+    create_table "answers", force: true do |t|
+    t.string   "name"
+    t.integer  "poll_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "answers", ["poll_id"], name: "index_answers_on_poll_id", using: :btree
+
+  create_table "polls", force: true do |t|
+    t.string   "question"
+    t.string   "creator"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "votes", force: true do |t|
+    t.string   "user"
+    t.integer  "answer_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "votes", ["answer_id"], name: "index_votes_on_answer_id", using: :btree
+

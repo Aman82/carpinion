@@ -1,23 +1,11 @@
 
 
-
-
-<!-- <% @user.errors.messages.each do |k ,v| %>
-<%= k %>: <%= v %> -->
-
     <h1>Show Users!</h1>
     <ul>
-        <% @users.each do |u| %>
             <li>
-            <strong> Username: <%= u.name %> , E-mail:<%= u.email %>, Password: <%= u.password %> </strong>
-                <%= link_to "Edit this user!", edit_user_path(u) %>
-                 <%= link_to "Delete this user!", @user, method: :delete, data: { confirm: 'Are you sure?' } %>
+            <strong> Username: <%= @user.name %> , E-mail:<%= @user.email %>, Password: <%= @user.password %> </strong>
 
-    <%= link_to "Back to the list!", users_path %>
-
-                
+            <%= link_to "Delete this user!", @user, method: :delete, data: { confirm: 'Are you sure?' } %>
+            <%= link_to "Back to the list!", users_path %>    
             </li>
-        <% end %>
     </ul>
-
- <!--    <%= debug(@user.errors) %> -->

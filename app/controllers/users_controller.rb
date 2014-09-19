@@ -10,13 +10,14 @@ class UsersController < ApplicationController
 
   def show
       @user = User.find(params[:id])
+      # select everything from user table where id(coloum) = row, params is array use to grab the value from URL query string.
   end
 
   def create
     # if params[:users][:email] == ""
      @user = User.new(params.require(:user).permit(:name, :email, :password))
      if @user.save
-          redirect_to users_path
+          redirect_to root_path
      else
           render 'new'
      end

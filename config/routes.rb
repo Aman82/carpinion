@@ -2,13 +2,13 @@ Rails.application.routes.draw do
  
 # USER RESOURCES
   root 'users#new'
-  get 'users/' => 'users#index'
+  get '/users/' => 'users#index'
   get '/signup' => 'users#new', as: :signup
-  get 'users/:id' => 'users#show', as: :user
-  post 'users/' => 'users#create'
-  get 'users/:id/edit' => 'users#edit', as: :edit_user
-  patch 'users/:id' => 'users#update'
-  delete 'users/:id' => 'users#destroy'
+  get '/users/:id' => 'users#show', as: :user
+  post '/users/' => 'users#create'
+  get '/users/:id/edit' => 'users#edit', as: :edit_user
+  patch '/users/:id' => 'users#update'
+  delete '/users/:id' => 'users#destroy'
 
 
 # SESSIONS RESOURCES
@@ -18,13 +18,20 @@ Rails.application.routes.draw do
   delete '/logout' =>'sessions#destroy', as: :log_out
 
 # VEHICLE RESOURCES
-  #resources :cars
+  resources :cars
   get 'cars/' => 'cars#index'
   post 'cars/' => 'cars#create'
   #get 'cars/:id/edit' => 'cars#edit', as: :edit_car
   patch 'cars/:id' => 'cars#update'
-  delete 'cars/:id' => 'cars#destroy'
+  delete '/cars/:id' => 'cars#destroy'
 
+# OpinionPoll::Application.routes.draw do
+#   root :to => "polls#index"
+
+#   resources :polls
+#   get 'vote/:answer_id', to: 'polls#vote', as: :vote_on_poll
+
+# end
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
