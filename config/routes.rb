@@ -25,13 +25,9 @@ Rails.application.routes.draw do
   patch 'cars/:id' => 'cars#update'
   delete '/cars/:id' => 'cars#destroy'
 
-# OpinionPoll::Application.routes.draw do
-#   root :to => "polls#index"
+# POLLS RESOURCES
 
-#   resources :polls
-#   get 'vote/:answer_id', to: 'polls#vote', as: :vote_on_poll
 
-# end
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

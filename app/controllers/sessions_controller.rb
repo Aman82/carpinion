@@ -1,6 +1,7 @@
 class SessionsController < ApplicationController
 
     def new
+            @cars = Car.all
     end
 
     def create
@@ -11,8 +12,10 @@ class SessionsController < ApplicationController
         end
 
         if user && user.authenticate(params[:session][:password])
+
             log_in(user)
-            redirect_to root_path
+          
+            redirect_to cars_path
         else
             flash[:error] ||= 'Try again.'
             render 'new'
@@ -20,7 +23,6 @@ class SessionsController < ApplicationController
     end
 
     def destroy
-
         log_out
         redirect_to sessions_path
     end

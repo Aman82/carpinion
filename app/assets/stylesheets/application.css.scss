@@ -21,7 +21,7 @@
 
 
  body {
-        background-color: #A9A9A9;
+        background-color: #ffffff;
         font-size: 18px;
         font-family: Helvetica, Arial, sans-serif;
         text-rendering: optimizeLegibility;
@@ -42,6 +42,10 @@
         display: inline;
         z-index: 3;
 }
+.text_field-size {
+ width: 150px;
+  }
+
 .enter{
 
       padding: 8px 8px 4px 4px;
@@ -57,23 +61,36 @@
           float: right;
 }
 
-.signup{
-        float: right;
-}
+
 
 .container{
         background: #DCDCDC; 
 }
 
 .footer{
-          width: 100%;
           font-size: 16px;
-          position: fixed;
-          bottom: 0rem;
-          background: #000000;
+          width:100%;
+          height:100px;
+          position:fixed;
+          bottom:0;
+          left:0;
+          background:#000000;
           opacity: 0.8;
           color: #FFFFFF;
 }
+.car-new, .car-edit {
+       text-align: center;
+}
+
+.user, .edit, .show, .update
+{
+       text-align: center;
+}
+.signup, .signin
+{
+       text-align: center;
+}
+
 
 .navbar-form{
          text-align: right;
@@ -81,11 +98,5 @@
 
 li{
   list-style-type: none;
-}
-
-rough{
-  background: url('car environment.jpg');
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
 }
 

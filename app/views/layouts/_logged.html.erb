@@ -1,0 +1,28 @@
+<div class="logged">
+
+<% if logged? %>
+	<%= render layout:application.html.erb %>
+	<% else %>
+	<%= render :new %>
+<% end %>
+
+
+
+flash.each do |name, msg| %>
+  <% if msg.is_a?(String) %>
+    <div class="alert alert-<%= name == :notice ? "success" : "error" %>">
+      <a class="close" data-dismiss="alert">&#215;</a>
+      <%= content_tag :div, msg, :id => "flash_#{name}" %>
+
+
+
+<%= form_for(:session, url: sessions_path) do |f| %>
+    <%= f.label :email %> <%= f.text_field :email %>
+    <%= f.label :password %> <%= f.password_field :password %>
+<%= f.submit "Sign In!" %>
+    
+<% end %>
+
+<%= link_to "Signup as a New User!", signup_path %>
+</div>
+<%= 

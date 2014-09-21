@@ -1,4 +1,4 @@
-
+<div class="car-new">
 <h2>Vehicle Detail Form!</h2>
 
 <%= form_for @car do |c| %>
@@ -27,11 +27,16 @@
      <%= c.label :colour %>
      <%= c.text_field :colour %>
 
-     <%= c.label :description %>
-     <%= c.text_field :description %>
+     <%= c.label :title %>
+     <%= c.text_field :title %>
 
+     <%= c.label :picture %>
+     <%= c.file_field :picture %>
+  
+          
      <%= c.submit "Add info!" %>
 
 <% end %>
 
     <%= link_to "Back to the list!", cars_path %>
+</div>

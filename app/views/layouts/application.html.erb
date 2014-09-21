@@ -6,71 +6,23 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
-    <header class="logo">
-          <a href="sessions/index.html.erb"><img src="assets/logo.jpg" alt="click for home." class="img-responsive"></a>
-    </header>
+   
 <body>
+<br><br>
 <div class="container">
-  <br><br>
-      <!-- row 1 -->
         <div id="navbar">
-          <div class="enter">
+          <header class="logo">
+          <img src="assets/c-logo.jpg" alt="click for home." class="img-responsive">
+          </header>
+        </div>
+        <div class="enter">
+                            Logged In: <%=session[:email]%><br>
+                           <%= link_to "Log out!", log_out_path, method: :delete%>
           <%= yield %>
-          </div>
         </div>
-      <!-- row 2 -->
-      <div id="carousel-id" class="carousel slide" data-ride="carousel">
-      <!-- Indicators -->
-        <ol class="carousel-indicators">
-          <li data-target="#carousel-id" data-slide-to="0" class="active"></li>
-          <li data-target="#carousel-id" data-slide-to="1"></li>
-          <li data-target="#carousel-id" data-slide-to="2"></li>
-        </ol>
-      <!-- Wrapper for slides -->
-        <div class="carousel-inner">
-              <div class="item active">
-                <img src="assets/camaro.jpg" style="width:820px; height:440px"/>
-                <div class="carousel-caption">
-                    2015 Camaro 
-                </div>
-              </div>
-              <div class="item">
-               <img src="assets/charger.jpg" style="width:820px; height:440px" class="img-responsive" />
-                <div class="carousel-caption">
-                  2014 charger 
-                </div>
-              </div>
-              <div class="item">
-               <img src="assets/farrari.jpg" style="width:820px; height:440px" class="img-responsive" />
-                <div class="carousel-caption">
-                  You Can Pinin My Farina 
-                </div>
-              </div>
-              <div class="item">
-               <img src="assets/Lamborghini.jpg" style="width:820px; height:440px" class="img-responsive" />
-                <div class="carousel-caption">
-                  2014 Lamborghini 
-                </div>
-              </div>
-              <div class="item">
-               <img src="assets/peugeot.jpg" style="width:820px; height:440px" class="img-responsive" />
-                <div class="carousel-caption">
-                  2013 peugeot 
-                </div>
-              </div>
-          </div>
-        </div>
-      <!-- Controls -->
-      <a class="left carousel-control" href="#carousel-id" role="button" data-slide="prev">
-        <span class="glyphicon glyphicon-chevron-left"></span>
-      </a>
-      <a class="right carousel-control" href="#carousel-id" role="button" data-slide="next">
-        <span class="glyphicon glyphicon-chevron-right"></span>
-      </a>
 </div> <!-- end container -->
       <!-- row 4 -->
     <footer class="footer">
-
         <div class="col-md-3 col-xs-3">
             <p>About Us</p><p>Blog</p>
             <p><a href="#" class="btn btn-success btn-xs">Read more >></a></p>

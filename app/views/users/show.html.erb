@@ -1,11 +1,12 @@
 
-
+<div class="show">
     <h1>Show Users!</h1>
     <ul>
             <li>
-            <strong> Username: <%= @user.name %> , E-mail:<%= @user.email %>, Password: <%= @user.password %> </strong>
-
+            <strong> Username: <%= @user.name %> & E-mail:<%= @user.email %></strong>
+			<%= link_to "Edit user!", edit_user_path(@user) %> 
             <%= link_to "Delete this user!", @user, method: :delete, data: { confirm: 'Are you sure?' } %>
             <%= link_to "Back to the list!", users_path %>    
             </li>
     </ul>
+</div>

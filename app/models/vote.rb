@@ -1,4 +1,6 @@
-class Vote < ActiveRecord::Base
+class Vote 
+  include Mongoid::Document
+
   belongs_to :answer
 
   validates :answer, presence: true

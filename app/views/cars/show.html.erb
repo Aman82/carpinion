@@ -3,7 +3,18 @@
     
     <ul>
         <li>
-        <strong> Make of the car: <%= @car.make %> , year is: <%= @car.year %> , trim <%= @car.trim %> , mileage on car:  <%= @car.mileage %> asking price: <%= @car.price %> , transmission <%= @car.transmission %> , colour<%= @car.colour %> </strong>
+        <strong> Make of the car: <%= @car.make %>,
+        		Year is: <%= @car.year %>,
+        		Trim <%= @car.trim %>,
+        		Mileage on car:  <%= @car.mileage %>,
+        		asking price: <%= @car.price %>,
+        		Transmission <%= @car.transmission %>,
+        		Colour<%= @car.colour %>,
+        		Title<%= @car.title %></strong>
+
+              <%= @car.picture.url %>
+              <%= image_tag @car.picture.url(:thumb) %>
+              
             <%= link_to "Delete this car!", @car, method: :delete, data: { confirm: 'Are you sure?' } %>
             <%= link_to "Back to the list!", cars_path %>  
         </li>

@@ -3,4 +3,11 @@ class ApplicationController < ActionController::Base
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
     include SessionsHelper
+
+      helper_method :current_user
+
+  def current_user
+    request.remote_ip
+  end
+  
 end

@@ -12,7 +12,7 @@ class CarsController < ApplicationController
   end
  
   def create
-     @car = Car.new(params.require(:car).permit(:make, :model, :year, :trim, :mileage, :price, :transmission, :colour, :description))
+     @car = Car.new(params.require(:car).permit(:make, :model, :year, :trim, :mileage, :price, :transmission, :colour, :title))
      if @car.save
           redirect_to root_path
      else
@@ -26,8 +26,8 @@ class CarsController < ApplicationController
 
   def update
       @car = Car.find(params[:id])
-      if @car.update_attributes(params.require(:car).permit(:make, :model, :year, :trim, :mileage, :price, :transmission, :colour, :description))
-          redirect_to car_path
+      if @car.update_attributes(params.require(:car).permit(:make, :model, :year, :trim, :mileage, :price, :transmission, :colour, :title))
+          redirect_to cars_path
       else
           render 'edit'
       end
@@ -36,6 +36,6 @@ class CarsController < ApplicationController
   def destroy
        @car = Car.find(params[:id])
         @car.destroy
-        redirect_to carinfos_path
+        redirect_to cars_path
   end
 end

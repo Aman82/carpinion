@@ -1,3 +1,4 @@
+<div class="car-edit">
 <h1>Edit car info.</h1>
 
     <%= form_for @car do |f| %>
@@ -9,11 +10,12 @@
 		Price: <%= f.text_field :price %><br />
 		Transmission: <%= f.text_field :transmission %><br />
 		Colour: <%= f.text_field :colour %><br />
-		Descripition: <%= f.text_field :description %><br />
-
+        Title: <%= f.text_field :title %>
+           
 
         <%= f.submit "Edit car details!" %>
 
     <% end %>
 
     <%= link_to "Back to the list!", cars_path %>
+</div>

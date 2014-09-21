@@ -1,11 +1,14 @@
+    <div class="user">
     <h1>Users!</h1>
     <ul>
         <% @users.each do |u| %>
             <li>
-                <strong> User name is</strong> <%= u.name %> ,<strong>E-mail ID:</strong><%= u.email %><strong> & password is</strong> <%= u.password %> 
+                <strong> UserName:</strong> <%= u.name %> <br> 
+                <strong>E-mail ID:</strong><%= u.email %><br>   
                 <%= link_to "Show", user_path(u) %>
                 <%= link_to "Edit user!", edit_user_path(u) %>
                  <%= link_to "Delete user!", u, method: :delete, data: {confirm: 'Are you sure?'} %>
             </li>
         <% end %>
     </ul>
+    </div>
