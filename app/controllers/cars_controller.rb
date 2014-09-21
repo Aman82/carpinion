@@ -5,10 +5,13 @@ class CarsController < ApplicationController
 
   def new
        @car = Car.new
+
   end
 
   def show
       @car = Car.find(params[:id])
+      @poll = Poll.new
+      puts "-----------------"
   end
  
   def create

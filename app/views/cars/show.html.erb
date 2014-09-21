@@ -19,3 +19,19 @@
             <%= link_to "Back to the list!", cars_path %>  
         </li>
     </ul>
+<div>
+    <div>
+        Poll: How much should I pay:
+
+    </div>
+    <div>
+        Answers:
+        <%= form_for @poll do |f| %>
+             <%= radio_button_tag(:price, "valuelow") %>
+            <%= label_tag(:price_valuelow, "Between : 2500 - 5000") %>
+            <%= radio_button_tag(:price, "valuehigh") %>
+            <%= label_tag(:price_valuehigh, "Between : 5000 - 7500") %>
+             <%= f.submit %>
+        <% end %>
+    </div>
+</div>

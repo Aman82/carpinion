@@ -1,12 +1,17 @@
-class Polls
+class Poll
   include Mongoid::Document
-  has_many :answers
-  has_many :votes, through: :answers
 
-  accepts_nested_attributes_for :answers, reject_if: proc { |a| a[:name].blank? }, allow_destroy: true
+  field :question, type: String
+  field :price, type: String
 
-  validate :has_minium_answers, :has_less_than_or_equal_to_the_maximum_answers, :updatable?
-  validates :question, presence: true
+
+  # has_many :answers
+  # has_many :votes, through: :answers
+
+  #accepts_nested_attributes_for :answers, reject_if: proc { |a| a[:name].blank? }, allow_destroy: true
+
+ # validate :has_minium_answers, :has_less_than_or_equal_to_the_maximum_answers, :updatable?
+ # validates :question, presence: true
 
   before_validation :ensure_question_punctuation
 

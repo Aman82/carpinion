@@ -3,7 +3,9 @@ class PollsController < ApplicationController
 
   # GET /polls
   def index
-    @polls = Poll.all
+     @cars = Car.all
+     @poll = Poll.new
+     @polls = Poll.all
     if(@polls.empty?)
       render action: 'index_no_polls'
     end      
@@ -95,6 +97,10 @@ class PollsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def poll_params
-      params[:poll].permit(:question, answers_attributes: [:name, :id] )
+     # params[:poll].permit(:question, answers_attributes: [:name, :id] )
+     params[:poll].permit(:price)
+
     end
+  
 end
+

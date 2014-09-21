@@ -1,7 +1,3 @@
-<h1>Welcome</h1>
-
-There are no polls created yet, would you like to 
-<%= link_to 'Create a new Poll', new_poll_path %>?
 <div class="container">
       <!-- row 1 -->
         <div id="navbar">
@@ -90,13 +86,10 @@ There are no polls created yet, would you like to
         Answers:
         <%= form_for @poll do |f| %>
              <%= radio_button_tag(:price, "valuelow") %>
-            <%= label_tag(:price_valuelow, "Below : $5000") %>
-            <%= radio_button_tag(:price, "valuemid") %>
-            <%= label_tag(:price_valuemid, "Between : 5000 - 10000") %>
+            <%= label_tag(:price_valuelow, "Between : 2500 - 5000") %>
             <%= radio_button_tag(:price, "valuehigh") %>
-            <%= label_tag(:price_valuehigh, "Above : $10000") %>
+            <%= label_tag(:price_valuehigh, "Between : 5000 - 7500") %>
              <%= f.submit %>
         <% end %>
     </div>
 </div>
-  <br><br><br><br><br><br><br><br><br>
