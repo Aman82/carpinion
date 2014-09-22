@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   # get 'polls/create'
 
   #root :to => "polls#index"
+  root "polls#index"
   resources :polls
 # USER RESOURCES
 
@@ -19,7 +20,7 @@ Rails.application.routes.draw do
 
 # SESSIONS RESOURCES
   #resources :users
-  root "sessions#new"
+  #root "sessions#new"
   get '/login' => 'sessions#new', as: :sessions
   post '/login' => 'sessions#create'  
   delete '/logout' =>'sessions#destroy', as: :log_out
