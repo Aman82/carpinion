@@ -4,7 +4,7 @@
     <%= form_for @user do |f| %>
         Name: <%= f.text_field :name %><br>
         Email: <%= f.text_field :email %><br>
-        Password: <%= f.text_field :password %><br>
+        Password: <%= f.password_field :password %><br>
 
         <%= f.submit "Edit user!" %><br><br>
 
@@ -12,3 +12,4 @@
 
     <%= link_to "Back to user list!", users_path %>
     </div>
+    <br><br><br><br><br>

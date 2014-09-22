@@ -5,19 +5,16 @@ class CarsController < ApplicationController
 
   def new
        @car = Car.new
-
   end
 
   def show
       @car = Car.find(params[:id])
-      @poll = Poll.new
-      puts "-----------------"
   end
  
   def create
      @car = Car.new(params.require(:car).permit(:make, :model, :year, :trim, :mileage, :price, :transmission, :colour, :title))
      if @car.save
-          redirect_to root_path
+          redirect_to cars_path
      else
           render 'new'
      end

@@ -50,7 +50,17 @@
 
       padding: 8px 8px 4px 4px;
 }
+input,textarea,select, .uneditable-input
+{
+  border: 1px solid #bbb;
+  width: 100%;
+  margin-bottom: 15px;
+  
 
+}
+input{
+  height: auto !important
+}
 #logo{
       position: fixed;
       top: 100px;
@@ -78,15 +88,18 @@
           opacity: 0.8;
           color: #FFFFFF;
 }
-.car-new, .car-edit {
-       text-align: center;
-}
 
-.user, .edit, .show, .update
+.user, .new, .edit, .show, .update
 {
        text-align: center;
 }
-.signup, .signin
+.car-new{
+  text-align: center;
+}
+.car-edit{
+  text-align: left;
+}
+.signup, .signin, .row
 {
        text-align: center;
 }
@@ -99,4 +112,6 @@
 li{
   list-style-type: none;
 }
-
+.carousel-control{
+  width:150px;
+}

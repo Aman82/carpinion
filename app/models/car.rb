@@ -1,6 +1,5 @@
 class Car
   include Mongoid::Document
-  include Mongoid::Paperclip
 
 
   field :make, type: String
@@ -14,14 +13,14 @@ class Car
   field :title, type: String
 
 
-  has_mongoid_attached_file :picture,
-  :styles =>
-  {
-  :thumb => "100x100",
-   :small => "150x150"
-  }
+  # has_mongoid_attached_file :picture,
+  # :styles =>
+  # {
+  # :thumb => "100x100",
+  #  :small => "150x150"
+  # }
   
-    validates_attachment_content_type :picture, content_type: /\Aimage\/.*\Z/ 
+    # validates_attachment_content_type :picture, content_type: /\Aimage\/.*\Z/ 
 
   # Example of general validation
   # validates :email, presence: true, uniqueness: true

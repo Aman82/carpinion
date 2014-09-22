@@ -1,10 +1,107 @@
-<h1>Polls to vote in</h1>
-<% @polls.each do |poll| %>
-    <h3>
-      <% if poll.has_been_voted_on_by(current_user) %>&#x2713;<% end %>
-      <%= link_to poll.question, poll %>
-    </h3>
+  <h1>Welcome to Car Opinion</h1>
+
+  <div id="carousel-id" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+      <ol class="carousel-indicators">
+        <li data-target="#carousel-id" data-slide-to="0" class="active"></li>
+        <li data-target="#carousel-id" data-slide-to="1"></li>
+        <li data-target="#carousel-id" data-slide-to="2"></li>
+        <li data-target="#carousel-id" data-slide-to="3"></li>
+        <li data-target="#carousel-id" data-slide-to="4"></li>
+        <li data-target="#carousel-id" data-slide-to="5"></li>
+      </ol>
+    <!-- Wrapper for slides -->
+      <div class="carousel-inner">
+            <div class="item active">
+              <img src="assets/camaro.jpg" style="width:900px; height:440px"/>
+              <div class="carousel-caption">
+                  2015 Camaro
+              </div>
+            </div>
+            <div class="item">
+             <img src="assets/charger.jpg" style="width:900px; height:440px" class="img-responsive" />
+              <div class="carousel-caption">
+                2014 charger <p></p>
+              </div>
+            </div>
+            <div class="item">
+             <img src="assets/farrari.jpg" style="width:900px; height:440px" class="img-responsive" />
+              <div class="carousel-caption">
+                2014 farrari
+              </div>
+            </div>
+            <div class="item">
+             <img src="assets/Lamborghini.jpg" style="width:900px; height:440px" class="img-responsive" />
+              <div class="carousel-caption">
+                2012 Lamborghini <p></p>
+              </div>
+            </div>
+            <div class="item">
+             <img src="assets/peugeot.jpg" style="width:900px; height:440px" class="img-responsive" />
+              <div class="carousel-caption">
+                2011 peugeot <p></p>
+              </div>
+            </div>
+      </div>
+  </div>
+
+    <!-- Controls -->
+    <a class="left carousel-control" href="#carousel-id" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left"></span>
+    </a>
+    <a class="right carousel-control" href="#carousel-id" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right"></span>
+    </a>
+  </div>
+      <div class="table-responsive">
+    <table class="table table-hover">
+        <tr class="info">
+              <th>Make </th>
+              <th>Model</th>
+              <th>Year</th>
+              <th>Trim</th>
+              <th>Mileage</th>
+              <th>Transmission</th>
+              <th>Colour</th>
+              <th>Title</th>
+              <th></th>
+              <th></th>
+              <th></th>
+        </tr>
+      <% @cars.each do |c| %>
+        <tr class="active">
+            <td><%= c.make %></td>
+            <td><%= c.model %></td>
+            <td><%= c.year %></td>
+            <td><%= c.trim %></td>
+            <td><%= c.mileage %></td>
+            <td><%= c.transmission %></td>
+            <td><%= c.colour %></td>
+            <td><%= c.title %></td>
+        </tr>
+   
+ <% end %>
+   </table>
+    </div>
+<div>
+<%= form_for :poll do |f| %>
+  <p>
+    <%= f.label :title %><br>
+    <%= f.text_field :title %>
+  </p>
+  <p>
+    <%= f.label :Suggestion %><br>
+    <%= f.text_area :text %>
+  </p>
+ <%= radio_button_tag(:price, "low") %>
+<%= label_tag(:price_low, "Below $5000") %>
+<%= radio_button_tag(:price, "medium") %>
+<%= label_tag(:price_medium, "Between $5000-$10000") %>
+<%= radio_button_tag(:price, "high") %>
+<%= label_tag(:price_high, "Above $10000") %>
+  <p>
+    <%= f.submit %>
+  </p>
 <% end %>
-    
-<br>
-<%= link_to 'Create a new Poll', new_poll_path %>
+</div>
+  <br><br><br><br><br>

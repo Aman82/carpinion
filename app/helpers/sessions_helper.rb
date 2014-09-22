@@ -42,6 +42,6 @@ module SessionsHelper
 
     # current_user Setter (similar to attr_writer)
     def current_user=(user)
-                @current_user = user
+        @current_user = user
     end
 end

@@ -1,22 +1,19 @@
+<div class="update">
 <h1>Update car info</h1>
 
-    <%= form_for @car do |f| %>
-        Make: <%= f.text_field :make %>
-        Model: <%= f.text_field :model %>
-        Year: <%= f.text_field :year %>
-        Trim: <%= f.text_field :trim %>
-		Mileage: <%= f.text_field :mileage %>
-		Price: <%= f.text_field :price %>
-		Transmission: <%= f.text_field :transmission %>
-		Colour: <%= f.text_field :colour %>
-		Descripition: <%= f.text_field :title %>
+<%= form_for @car do |f| %>
+        Make: <br><%= f.text_field :make %><br>
+        Model: <br><%= f.text_field :model %><br>
+        Year: <br><%= f.text_field :year %><br>
+        Trim: <br><%= f.text_field :trim %><br>
+        Mileage:<br> <%= f.text_field :mileage %><br>
+        Transmisson: <br><%= f.text_field :transmission %><br>
+        Colour: <br><%= f.text_field :colour %><br>
+        Title: <br><%= f.text_field :title %><br><br>
 
-         <%= f.label :picture %>
-         <%= f.file_field :picture %>
-
-        <%= f.submit "Edit car details!" %>
-
-    <% end %>
-
-    <%= link_to "Back to the list!", cars_path %>
-
+    <%= f.submit "Edit car details!" %>      
+    
+<% end %>
+<%= link_to "Back to the list!", cars_path %>
+</div>
+<br><br><br><br>

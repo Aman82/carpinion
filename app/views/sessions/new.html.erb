@@ -1,27 +1,14 @@
 <div class="signin">
+
 <h1>Log In!</h1>
-<br>
-<%= form_for(:session, url: sessions_path) do |f| %>
+
+    <%= form_for(:session, url: sessions_path) do |f| %>
     <%= f.label :email %><br> <%= f.text_field :email %><br />
     <%= f.label :password %> <br><%= f.password_field :password %><br><br />
-<%= f.submit "Sign In!" %><br>
- <% end %>
-<br><br>
+    <%= f.submit "Sign In!" %><br>
+    <% end %>
+<br>
 <%= link_to "Signup for New Account!", signup_path %>
 </div>
-<div class="show">
-<h1>Cars!</h1>
-    <ul>
-        <% @cars.each do |c| %>
-            <li>
-                <strong> Make is </strong><%= c.make %>
-                <strong> Year: </strong><%= c.year %>
-                <strong> Veh. trim</strong> <%= c.trim %>
-                <strong> Mileage on veh.</strong> <%= c.mileage %>
-                <strong> veh. transmission is </strong><%= c.transmission %>
-                <strong> Colour is </strong><%= c.colour %> 
-                <strong>and asking price is</strong> $ <%= c.price %> 
-            </li>
-            <% end %>
-    </ul>
-</div>
+
+<br><br><br><br><br><br><br>

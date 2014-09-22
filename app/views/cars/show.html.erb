@@ -1,37 +1,39 @@
+<div class="show">
 <h1>Show Cars</h1>
 
-    
-    <ul>
-        <li>
-        <strong> Make of the car: <%= @car.make %>,
-        		Year is: <%= @car.year %>,
-        		Trim <%= @car.trim %>,
-        		Mileage on car:  <%= @car.mileage %>,
-        		asking price: <%= @car.price %>,
-        		Transmission <%= @car.transmission %>,
-        		Colour<%= @car.colour %>,
-        		Title<%= @car.title %></strong>
+    <div class="show">
+    <h1>Cars!</h1>       
+    <div class="table-responsive">
+    <table class="table table-hover">
+        <tr class="info">
+              <th>Make </th>
+              <th>Model</th>
+              <th>Year</th>
+              <th>Trim</th>
+              <th>Mileage</th>
+              <th>Transmission</th>
+              <th>Colour</th>
+              <th>Title</th>
+              <th></th>
+        </tr>
+        <tr class="active">
+            <td><%= @car.make %></td>
+            <td><%= @car.model %></td>
+            <td><%= @car.year %></td>
+            <td><%= @car.trim %></td>
+            <td><%= @car.mileage %></td>
+            <td><%= @car.transmission %></td>
+            <td><%= @car.colour %></td>
+            <td><%= @car.title %></td>
+            <td> <%= link_to "Delete this car!", @car, method: :delete, data: { confirm: 'Are you sure?' } %>
+            </td>
+        </tr>
+   </table>
 
-              <%= @car.picture.url %>
-              <%= image_tag @car.picture.url(:thumb) %>
+    </div>
+</div>
               
-            <%= link_to "Delete this car!", @car, method: :delete, data: { confirm: 'Are you sure?' } %>
-            <%= link_to "Back to the list!", cars_path %>  
-        </li>
-    </ul>
-<div>
-    <div>
-        Poll: How much should I pay:
+           <%= link_to "Back to the list!", cars_path %>  
+  
 
-    </div>
-    <div>
-        Answers:
-        <%= form_for @poll do |f| %>
-             <%= radio_button_tag(:price, "valuelow") %>
-            <%= label_tag(:price_valuelow, "Between : 2500 - 5000") %>
-            <%= radio_button_tag(:price, "valuehigh") %>
-            <%= label_tag(:price_valuehigh, "Between : 5000 - 7500") %>
-             <%= f.submit %>
-        <% end %>
-    </div>
 </div>

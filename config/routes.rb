@@ -1,12 +1,12 @@
 Rails.application.routes.draw do
- 
-# USER RESOURCES
+  # get 'polls/index'
+
+  # get 'polls/create'
+
   #root :to => "polls#index"
-
   resources :polls
-  # get 'vote/:answer_id', to: 'polls#vote', as: :vote_on_poll
+# USER RESOURCES
 
-  
   #root 'users#new'
   get '/users/' => 'users#index'
   get '/signup' => 'users#new', as: :signup
@@ -32,7 +32,10 @@ Rails.application.routes.draw do
   delete '/cars/:id' => 'cars#destroy'
 
 # POLLS RESOURCES
+  
+  # get 'vote/:answer_id', to: 'polls#vote', as: :vote_on_poll
 
+  
 
 
   # The priority is based upon order of creation: first created -> highest priority.

@@ -1,5 +1,4 @@
-
-<div class="signup">
+<div class="new">
 
 <h1>Signup!</h1>
 
@@ -11,10 +10,10 @@
      <%= f.text_field :email %><br>
 
      <%= f.label :password %><br>
-     <%= f.text_field :password %><br>
+     <%= f.password_field :password %><br>
 
      <%= f.label :password_confirmation %><%= @user.errors.messages[:password].join(", ") %><br>
-     <%= f.text_field :password_confirmation %><br><br>
+     <%= f.password_field :password_confirmation %><br><br>
 
      <%= f.submit "Sign Me Up!" %><br>
      <%= link_to "Log in!", sessions_path %><br>
@@ -22,3 +21,4 @@
    
     <%= link_to "Back to the list!", users_path %>
     </div>
+    <br><br><br><br><br>

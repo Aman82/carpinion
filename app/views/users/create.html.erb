@@ -1,4 +1,4 @@
-<div class="signup">
+<div class="news">
 <h2>Sign Up!</h2>
 
 <%= form_for @user do |f| %><br>
@@ -9,14 +9,15 @@
      <%= f.text_field :email %><br>
 
      <%= f.label :password %><br>
-     <%= f.text_field :password %><br>
+     <%= f.password_field :password %><br>
 
      <%= f.label :password_confirmation %><%= @user.erroes.messages[:password].join(", ") %><br>
-     <%= f.text_field :password_confirmation , class: 'form-control' %><br>
+     <%= f.password_field :password_confirmation , class: 'form-control' %><br>
 
      <%= f.submit "Sign Me Up!" %><br>
      <%= link_to "Log in!", sessions_path %><br>
 
 <% end %><br>
-    <%= link_to "Back to the list!", users_path %>
+    <%= link_to "Back to users list!", users_path %>
  </div>
+ <br><br><br><br><br>

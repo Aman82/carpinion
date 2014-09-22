@@ -16,7 +16,7 @@ class UsersController < ApplicationController
     # if params[:users][:email] == ""
      @user = User.new(params.require(:user).permit(:name, :email, :password, :password_conf))
      if @user.save
-          redirect_to root_path
+          redirect_to login_path
      else
           render 'new'
      end
